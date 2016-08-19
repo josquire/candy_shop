@@ -1,0 +1,13 @@
+<h1><%= @candy_store.name %>- Inventory</h1>
+
+<% if @candies.any? %>
+  <ul>
+    <% @candies.each do |candy| %>
+    <li><%= candy.info %> - <%= link_to 'Show', candy_store_candy_path(@candy_store, candy)%></li>
+    <% end %>
+  </ul>
+  <% else %>
+    <h3>No candy listed yet, please add some</h3>
+  <% end %>
+
+<%= link_to 'Add candy to Inventory', new_candy_store_candy_path(@candy_store) %>

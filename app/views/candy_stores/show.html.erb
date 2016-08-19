@@ -1,0 +1,25 @@
+<h1>Candy Shoppe <%= @candy_store.name %> Info</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Hours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> <%= @candy_store.address %> </td>
+      <td> <%= @candy_store.phone %> </td>
+      <td> <%= @candy_store.hours %> </td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit Shoppe', edit_candy_store_path(@candy_store) %>
+<%= link_to 'Delete Shoppe', candy_store_path(@candy_store), method: :delete %>
+<%= link_to "#{@candy_store.name.pluralize} Inventory", candy_store_candies_path(@candy_store) %>
+
+<br/>
+<%= link_to 'All Shoppes', candy_stores_path %>

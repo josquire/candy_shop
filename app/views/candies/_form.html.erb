@@ -1,0 +1,18 @@
+<%= form_for [@candy_store, @candy] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+  <br/>
+  <%= f.label :cost %>
+  <%= f.number_field :cost, required: true %>
+  <br/>
+  <%= f.label :allergens %>
+  <%= f.check_box :allergens %>
+  <br/>
+  <%= f.label :calories %>
+  <%= f.text_field :calories %>
+  <br/>
+  <%= f.label :ranking %>
+  <%= f.select :ranking, (1..10).to_a%>
+  <br/>
+  <%= f.submit %>
+<% end %>

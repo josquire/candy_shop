@@ -1,0 +1,17 @@
+<h1>Candy Shoppes</h1>
+
+<% if @candy_stores.any? %>
+
+  <ul>
+    <% @candy_stores.each do |store| %>
+      <li>
+        <%= link_to store.name, candy_store_path(store)%>
+      </li>
+    <% end %>
+  </ul>
+
+<% else %>
+
+<% end %>
+
+<%= link_to 'Create A Shoppe', new_candy_store_path %>

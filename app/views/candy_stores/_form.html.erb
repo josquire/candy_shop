@@ -1,0 +1,25 @@
+<% if @candy_store.errors.any? %>
+  <ul>
+    <% @candy_store.errors.full_message.each do |error| %>
+      <li> <%error%></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <%= form_for @candy_store do |f| %>
+    <br/>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br/>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+    <br/>
+    <%= f.label :phone %>
+    <%= f.telephone_field :phone %>
+    <br/>
+    <%= f.label :hours %>
+    <%= f.text_field :hours %>
+    <br/>
+    <%= f.submit %>
+
+  <% end %>

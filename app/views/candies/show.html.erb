@@ -1,0 +1,12 @@
+<h1><%= @candy.info %></h1>
+
+<p> Cost: $<%= @candy.cost %> </p>
+<p> Allergens: <%= @candy.allergens %> </p>
+<p> Calories: <%= @candy.calories %> </p>
+<p> Ranking: <%= @candy.ranking%> </p>
+
+<%= link_to 'Edit Candy', edit_candy_store_candy_path(@candy_store, @candy) %>
+<%= link_to 'Delete Candy', candy_store_candy_path(@candy_store, @candy),
+              method: :delete, data: {confirm: 'Really Delete?'}%>
+<br/>
+<%= link_to 'All Candy', candy_store_candies_path(@candy_store)%>

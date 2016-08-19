@@ -4,7 +4,7 @@
 
   <ul>
     <% @candy_stores.each do |store| %>
-      <li>
+      <li class="list">
         <%= link_to store.name, candy_store_path(store)%>
       </li>
     <% end %>

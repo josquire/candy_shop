@@ -3,7 +3,7 @@
 <% if @candies.any? %>
   <ul>
     <% @candies.each do |candy| %>
-    <li><%= candy.info %> - <%= link_to 'Show', candy_store_candy_path(@candy_store, candy)%></li>
+    <li class="list"><%= candy.info %> - <%= link_to 'Show', candy_store_candy_path(@candy_store, candy)%></li>
     <% end %>
   </ul>
   <% else %>
@@ -11,3 +11,4 @@
   <% end %>
 
 <%= link_to 'Add candy to Inventory', new_candy_store_candy_path(@candy_store) %>
+<%= link_to 'Return to Candy Shoppes', candy_stores_path %>
